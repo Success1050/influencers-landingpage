@@ -41,13 +41,13 @@ export default function RodeoEvents() {
       date: "JAN 17, 2026",
       title: "Tampa Rodeo",
       location: "Dover, FL",
-      route: "/#bookingForm",
+      route: "mailto:admin@traceadkinsvip.com",
     },
     {
       date: "MAY 14, 2026",
       title: "Miles City Bucking Horse Sale",
       location: "Miles City, MT",
-      route: "/#bookingForm",
+      route: "mailto:admin@traceadkinsvip.com",
     },
   ];
 
