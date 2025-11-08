@@ -7,6 +7,7 @@ import Footer from "@/components/bootomFooter";
 import FAQComponent from "@/components/faqs";
 import emailjs from "@emailjs/browser";
 import Overview from "@/components/overview";
+import RodeoEvents from "@/components/events";
 
 interface FormData {
   firstName: string;
@@ -23,7 +24,7 @@ interface FormData {
 export default function TraceAdkinsLanding() {
   const [loading, setloading] = useState<boolean>(false);
   const [buttonText, setButtonText] = useState("Submit");
-  const [tab, setTab] = useState<"overview" | "faq" | "">("overview");
+  const [tab, setTab] = useState<"about" | "faq" | "">("about");
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -60,7 +61,7 @@ export default function TraceAdkinsLanding() {
   };
 
   const rendertabsContent = () => {
-    if (tab == "overview") {
+    if (tab == "about") {
       return <Overview />;
     } else if (tab == "faq") {
       return <FAQComponent />;
@@ -129,28 +130,6 @@ export default function TraceAdkinsLanding() {
               </a>
             </nav>
           </div>
-
-          <div className="flex items-center space-x-2 sm:space-x-4">
-            <button className="bg-red-600 hover:bg-red-700 px-4 sm:px-6 py-2 rounded transition text-sm sm:text-base">
-              Book Now
-            </button>
-            <button className="border border-white px-3 sm:px-4 py-2 rounded hover:bg-white hover:text-black transition text-sm sm:text-base">
-              Login
-            </button>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto mt-4 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-          <div className="flex-1 relative w-full">
-            <input
-              type="text"
-              placeholder="Search for artists or tags"
-              className="w-full px-4 py-2 rounded-l text-black bg-white"
-            />
-            <button className="absolute right-0 top-0 bg-red-600 px-4 sm:px-6 py-2 rounded-r hover:bg-red-700">
-              <Search className="w-5 h-5" />
-            </button>
-          </div>
         </div>
       </header>
 
@@ -177,13 +156,13 @@ export default function TraceAdkinsLanding() {
                 <button
                   type="button"
                   className={`${
-                    tab === "overview"
+                    tab === "about"
                       ? "border-b-2 border-white pb-2"
                       : "border-none"
                   }`}
-                  onClick={() => setTab("overview")}
+                  onClick={() => setTab("about")}
                 >
-                  Overview
+                  About
                 </button>
 
                 <button
@@ -218,7 +197,9 @@ export default function TraceAdkinsLanding() {
           {/* Main Content */}
           <div className="lg:col-span-2">{rendertabsContent()}</div>
         </div>
-        <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-blue-50 rounded-lg">
+
+        <RodeoEvents />
+        {/* <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-blue-50 rounded-lg">
           <p className="text-gray-700 mb-4 text-sm sm:text-base">
             Trace Adkins performs{" "}
             <a href="#" className="text-blue-600 hover:underline">
@@ -243,7 +224,7 @@ export default function TraceAdkinsLanding() {
             Adkins Music agency for ratings, reviews, videos and information on
             scheduling Trace Adkins for an upcoming event.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* Booking Form Section */}
