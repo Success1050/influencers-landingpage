@@ -152,12 +152,13 @@ export default function TraceAdkinsLanding() {
                   TRACE ADKINS
                 </h1>
               </div>
+
               <nav className="flex space-x-4 sm:space-x-6 text-base sm:text-lg justify-center sm:justify-start">
                 <button
                   type="button"
                   className={`${
                     tab === "about"
-                      ? "border-b-2 border-white pb-2"
+                      ? "border-b-2 border-white pb-1"
                       : "border-none"
                   }`}
                   onClick={() => setTab("about")}
@@ -170,13 +171,18 @@ export default function TraceAdkinsLanding() {
                   onClick={() => setTab("faq")}
                   className={`${
                     tab === "faq"
-                      ? "border-b-2 border-white pb-2"
+                      ? "border-b-2 border-white pb-1"
                       : "border-none"
                   }`}
                 >
                   FAQs
                 </button>
               </nav>
+              <h2 className="mt-4">
+                This site is dedicated to Trace Adkins for Meet and Greet,
+                Tickets Purchase, Tour Updates and Event. All
+                American Entertainment
+              </h2>
             </div>
           </div>
         </div>

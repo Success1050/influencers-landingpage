@@ -54,9 +54,13 @@ export default function RodeoEvents() {
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-center items-center w-[90%] md:w-[50%] mx-auto my-20">
+        <div className="flex justify-center items-center w-[90%] md:w-[50%] mx-auto my-16">
           <img src="/artist.webp" className="w-full" />
         </div>
+
+        <h2 className="font-semibold text-[30px] text-center text-black mb-1">
+          Get Early Access to Trace Adkins Upcoming Tour
+        </h2>
 
         {/* Mobile: Stack vertically, Desktop: Side by side */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
