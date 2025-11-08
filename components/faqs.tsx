@@ -23,8 +23,8 @@ export default function FAQComponent() {
           Our booking agents have successfully helped clients around the world
           secure talent like Trace Adkins for speaking engagements, personal
           appearances, product endorsements, or corporate entertainment for over
-          15 years. The team at AAE Music represents and listens to the needs of
-          organizations and corporations seeking to hire musicians, bands, or
+          15 years. The team at Trace Adkins represents and listens to the needs
+          of organizations and corporations seeking to hire musicians, bands, or
           entertainers. Fill out a{" "}
           <a href="/#bookingForm" className="text-blue-600 hover:underline">
             booking request form
@@ -63,10 +63,10 @@ export default function FAQComponent() {
       question: "WHO IS THE AGENT FOR TRACE ADKINS?",
       answer: (
         <p className="text-gray-700 leading-relaxed">
-          AAE Music has successfully secured celebrity talent like Trace Adkins
-          for clients worldwide for more than 15 years. As a full-service artist
-          booking agency, we have access to virtually any artist, singer, or
-          performer in the world. Our artist booking agents are happy to help
+          Trace Adkins has successfully secured celebrity talent like Trace
+          Adkins for clients worldwide for more than 15 years. As a full-service
+          artist booking agency, we have access to virtually any artist, singer,
+          or performer in the world. Our artist booking agents are happy to help
           you with any entertainment buying needs, from booking Trace Adkins or
           other live entertainment, to researching artists and checking
           availability.
@@ -93,7 +93,7 @@ export default function FAQComponent() {
 
       {/* FAQ Items */}
       <div className="space-y-4">
-        {faqItems.map((item, index) => (
+        {faqItems.map((item) => (
           <div key={item.id} className="border-b border-gray-300">
             <button
               onClick={() => toggleItem(item.id)}
