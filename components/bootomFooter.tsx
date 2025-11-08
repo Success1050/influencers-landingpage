@@ -10,9 +10,8 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-white">
-              <div className="text-3xl font-serif leading-none">AAE</div>
-              <div className="text-xs text-red-600 font-medium tracking-wider">
-                MUSIC
+              <div className="text-3xl font-serif leading-none">
+                Trace Adkins
               </div>
             </div>
           </div>
