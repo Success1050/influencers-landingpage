@@ -296,7 +296,7 @@ export default function TraceAdkinsLanding() {
                 <input
                   type="text"
                   name="address"
-                  placeholder="your address"
+                  placeholder="Home address"
                   value={formData.address}
                   onChange={handleInputChange}
                   className="px-4 py-3 rounded bg-transparent border border-gray-400 focus:border-white focus:outline-none text-sm sm:text-base"
