@@ -8,6 +8,7 @@ import FAQComponent from "@/components/faqs";
 import emailjs from "@emailjs/browser";
 import Overview from "@/components/overview";
 import RodeoEvents from "@/components/events";
+import Link from "next/link";
 
 interface FormData {
   firstName: string;
@@ -199,9 +200,14 @@ export default function TraceAdkinsLanding() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Left Sidebar */}
           <div className="lg:col-span-1">
-            <button className="w-full bg-red-600 text-white py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-red-700 transition mb-4 sm:mb-6">
-              Book Trace Adkins
-            </button>
+            <Link href={"#bookingForm"}>
+              <button
+                // href="#bookingForm"
+                className="w-full bg-red-600 text-white py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-red-700 transition mb-6 sm:mb-6"
+              >
+                Book Trace Adkins
+              </button>
+            </Link>
 
             <ArtistInfoCard />
           </div>
