@@ -16,6 +16,8 @@ interface FormData {
   phone: string;
   eventDate: string;
   eventType: string;
+  request: string;
+  address: string;
   budget: string;
   comments: string;
   hostedBefore: string;
@@ -30,6 +32,8 @@ export default function TraceAdkinsLanding() {
     lastName: "",
     email: "",
     phone: "",
+    address: "",
+    request: "",
     eventDate: "",
     eventType: "",
     budget: "",
@@ -79,6 +83,8 @@ export default function TraceAdkinsLanding() {
       Email: ${formData.email}
       Phone: ${formData.phone}
       Event Type: ${formData.eventType}
+     address: ${formData.address}
+      request: ${formData.request}
       Event Date: ${formData.eventDate}
       Budget: ${formData.budget}
       Hosted before: ${formData.hostedBefore}
@@ -205,32 +211,6 @@ export default function TraceAdkinsLanding() {
         </div>
 
         <RodeoEvents />
-        {/* <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-blue-50 rounded-lg">
-          <p className="text-gray-700 mb-4 text-sm sm:text-base">
-            Trace Adkins performs{" "}
-            <a href="#" className="text-blue-600 hover:underline">
-              country
-            </a>
-            ,{" "}
-            <a href="#" className="text-blue-600 hover:underline">
-              modern country
-            </a>
-            ,{" "}
-            <a href="#" className="text-blue-600 hover:underline">
-              male vocalists
-            </a>{" "}
-            music and can be booked for (private) corporate events, personal
-            appearances, or other music performances. The estimated booking fee
-            range to book Trace Adkins for your event is Demo:25-35,35-50,50 +.
-            Trace Adkins has more than 416.5K listeners worldwide and really
-            knows how to entertain your audience. Similar artists are Montgomery
-            Gentry, Joe Nichols, Tim McGraw, Brad Paisley, Kenny Chesney, Dierks
-            Bentley, Tracy Byrd, Chris Young, Keith Anderson, Gary Allan, Blake
-            Shelton, Justin Moore, Rodney Atkins, Jason Aldean. Contact Trace
-            Adkins Music agency for ratings, reviews, videos and information on
-            scheduling Trace Adkins for an upcoming event.
-          </p>
-        </div> */}
       </section>
 
       {/* Booking Form Section */}
@@ -240,7 +220,7 @@ export default function TraceAdkinsLanding() {
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12">
-            TALK TO US ABOUT YOUR EVENT
+            TALK TO US ABOUT YOUR REQUEST
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
@@ -313,9 +293,39 @@ export default function TraceAdkinsLanding() {
                   onChange={handleInputChange}
                   className="px-4 py-3 rounded bg-transparent border border-gray-400 focus:border-white focus:outline-none text-sm sm:text-base"
                 />
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="your address"
+                  value={formData.address}
+                  onChange={handleInputChange}
+                  className="px-4 py-3 rounded bg-transparent border border-gray-400 focus:border-white focus:outline-none text-sm sm:text-base"
+                />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <select
+                  name="request"
+                  value={formData.request}
+                  onChange={handleInputChange}
+                  className="px-4 py-3 rounded bg-transparent border border-gray-400 focus:border-white focus:outline-none text-sm sm:text-base"
+                >
+                  <option value="" className="bg-gray-800">
+                    What is your Request?
+                  </option>
+                  <option value="meet and greet" className="bg-gray-800">
+                    Meet and Greet
+                  </option>
+                  <option value="Virtual Meeting" className="bg-gray-800">
+                    Virtual Meeting
+                  </option>
+                  <option value="Event Planning" className="bg-gray-800">
+                    Event Planning
+                  </option>
+                  <option value="Ticket Purchase" className="bg-gray-800">
+                    Ticket Purchase
+                  </option>
+                </select>
                 <select
                   name="eventType"
                   value={formData.eventType}
@@ -356,6 +366,8 @@ export default function TraceAdkinsLanding() {
                     Other
                   </option>
                 </select>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <select
                   name="budget"
                   value={formData.budget}
