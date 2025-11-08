@@ -151,15 +151,6 @@ export default function TraceAdkinsLanding() {
               <Search className="w-5 h-5" />
             </button>
           </div>
-          <div className="flex items-center justify-center gap-4 w-full sm:w-auto">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-5 h-5" />
-              <span className="text-yellow-500 font-semibold text-sm sm:text-base">
-                1.800.698.2536
-              </span>
-            </div>
-            <Heart className="w-6 h-6 cursor-pointer hover:text-red-500 transition" />
-          </div>
         </div>
       </header>
 

@@ -29,10 +29,10 @@ export default function FAQComponent() {
           <a href="/#bookingForm" className="text-blue-600 hover:underline">
             booking request form
           </a>{" "}
-          for Trace Adkins, or call our office at 1.800.698.2536 to discuss your
-          upcoming event. One of our experienced agents will be happy to help
-          you get pricing information and check availability for Trace Adkins or
-          any other artist of your choice.
+          for Trace Adkins, or call our office to discuss your upcoming event.
+          One of our experienced agents will be happy to help you get pricing
+          information and check availability for Trace Adkins or any other
+          artist of your choice.
         </p>
       ),
     },
@@ -53,8 +53,7 @@ export default function FAQComponent() {
           <a href="#" className="text-blue-600 hover:underline">
             booking request form
           </a>{" "}
-          or call our office at 1.800.698.2536 to speak with an experienced
-          booking agent.
+          or call our office at to speak with an experienced booking agent.
         </p>
       ),
     },
