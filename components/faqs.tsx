@@ -60,7 +60,7 @@ export default function FAQComponent() {
     {
       id: "agent",
       icon: <Users className="w-5 h-5" />,
-      question: "WHO IS THE AGENT FOR TRACE ADKINS?",
+      question: "WHO IS THE AGENT FOR TRACE ADKINS MANAGEMENT?",
       answer: (
         <p className="text-gray-700 leading-relaxed">
           Trace Adkins has successfully secured celebrity talent like Trace
