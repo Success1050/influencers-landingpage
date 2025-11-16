@@ -145,12 +145,12 @@ export default function TraceAdkinsLanding() {
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center py-8">
           <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-6 sm:space-y-0 sm:space-x-8 w-full">
-            <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-gray-700 border-4 border-white overflow-hidden shrink-0">
+            <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-4 border-white overflow-hidden shrink-0 relative bg-gray-700 flex items-center justify-center">
               <img
-                src={"/artist.webp"}
-                className="w-full h-full bg-linear-to-br from-gray-600 to-gray-800 flex items-center justify-center text-4xl sm:text-6xl font-bold text-white"
+                src="/snr.jpg"
+                alt="Profile"
+                className="w-full h-full object-cover"
               />
-              TA
             </div>
 
             <div className="text-white text-center sm:text-left">
@@ -384,7 +384,7 @@ export default function TraceAdkinsLanding() {
                     Event Budget*
                   </option>
                   <option value="under25k" className="bg-gray-800">
-                    $10,000 - $25,000
+                    $1,000 - $25,000
                   </option>
                   <option value="25k-50k" className="bg-gray-800">
                     $25,000 - $50,000
