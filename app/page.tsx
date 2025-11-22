@@ -221,7 +221,7 @@ export default function TraceAdkinsLanding() {
 
       {/* Booking Form Section */}
       <section
-        className="bg-black text-white py-12 sm:py-16 px-4 sm:px-6"
+        className="bg-black text-white py-12 sm:py-16 px-4 sm:px-6 mb-0"
         id="bookingForm"
       >
         <div className="max-w-7xl mx-auto">

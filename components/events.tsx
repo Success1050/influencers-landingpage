@@ -1,4 +1,5 @@
 import React from "react";
+import EventListing from "./Presale";
 
 interface EventCardProps {
   date: string;
@@ -52,7 +53,7 @@ export default function RodeoEvents() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mb-0">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center items-center w-[90%] md:w-[50%] mx-auto my-16">
           <img src="/artist.webp" className="w-full" />
@@ -63,7 +64,7 @@ export default function RodeoEvents() {
         </h2>
 
         {/* Mobile: Stack vertically, Desktop: Side by side */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {events.map((event, index) => (
             <EventCard
               key={index}
@@ -73,7 +74,8 @@ export default function RodeoEvents() {
               route={event.route}
             />
           ))}
-        </div>
+        </div> */}
+        <EventListing />
       </div>
     </div>
   );
