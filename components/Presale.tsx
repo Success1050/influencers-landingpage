@@ -9,7 +9,6 @@ interface Event {
   buttons: Array<{
     text: string;
     variant: "primary" | "secondary";
-    url?: string;
   }>;
 }
 
@@ -38,7 +37,6 @@ const EventListing: React.FC = () => {
         {
           text: "GET PRESALE CODE",
           variant: "secondary",
-          url: "/#bookingForm",
         },
         { text: "PRESALE TICKETS", variant: "secondary" },
       ],
@@ -70,22 +68,15 @@ const EventListing: React.FC = () => {
               </div>
 
               {/* Right section - Buttons */}
-              <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 md:justify-end">
-                {event.buttons.map((button, idx) =>
-                  button.url ? (
-                    <Link key={idx} href={button.url}>
-                      <button className="bg-gray-400 hover:bg-gray-300 text-black font-bold py-3 px-6 rounded transition-colors duration-200 whitespace-nowrap text-sm md:text-base">
-                        {button.text}
-                      </button>
-                    </Link>
-                  ) : (
-                    <Link key={idx} href={"#"}>
-                      <button className="bg-gray-400 hover:bg-gray-300 text-black font-bold py-3 px-6 rounded transition-colors duration-200 whitespace-nowrap text-sm md:text-base">
-                        {button.text}
-                      </button>
-                    </Link>
-                  )
-                )}
+              <div className="flex flex-col justify-center items-center sm:flex-row md:flex-col lg:flex-row gap-3 md:justify-end">
+                {event.buttons.map((button, idx) => (
+                  <a
+                    href="mailto:admin@traceadkinsvip.com"
+                    className="bg-gray-400 hover:bg-gray-300 text-black font-bold py-3 px-6 rounded transition-colors duration-200 whitespace-nowrap text-sm md:text-base"
+                  >
+                    {button.text}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
