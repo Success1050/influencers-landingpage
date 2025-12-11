@@ -14,22 +14,36 @@ interface Event {
 
 const EventListing: React.FC = () => {
   const events: Event[] = [
-    {
+        {
       id: 1,
+      date: "JAN 16, 2026",
+      title: "Oxford Performing Arts Center",
+      location: "Oxford, AL",
+    buttons: [{ text: "TICKETS", variant: "secondary" }],
+    },
+    {
+      id: 2,
+      date: "JAN 17, 2026",
+      title: "Tampa Rodeo",
+      location: "Dover, FL",
+     buttons: [{ text: "TICKETS", variant: "secondary" }],
+    },
+    {
+      id: 3,
       date: "MAR 28, 2026",
       title: "Rattlesnake Rodeo",
       location: "Opp, AL",
       buttons: [{ text: "PRESALE TICKETS", variant: "secondary" }],
     },
     {
-      id: 2,
+      id: 4,
       date: "MAY 14, 2026",
       title: "Miles City Bucking Horse Sale",
       location: "Miles City, MT",
       buttons: [{ text: "TICKETS", variant: "secondary" }],
     },
     {
-      id: 3,
+      id: 5,
       date: "JUN 21, 2026",
       title: "Alabama Theatre",
       location: "North Myrtle Beach, SC",
@@ -41,6 +55,7 @@ const EventListing: React.FC = () => {
         { text: "PRESALE TICKETS", variant: "secondary" },
       ],
     },
+
   ];
 
   return (
@@ -71,6 +86,7 @@ const EventListing: React.FC = () => {
               <div className="flex flex-col justify-center items-center sm:flex-row md:flex-col lg:flex-row gap-3 md:justify-end">
                 {event.buttons.map((button, idx) => (
                   <a
+                  key={idx}
                     href="mailto:admin@traceadkinsvip.com"
                     className="bg-gray-400 hover:bg-gray-300 text-black font-bold py-3 px-6 rounded transition-colors duration-200 whitespace-nowrap text-sm md:text-base"
                   >
